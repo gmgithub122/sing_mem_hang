@@ -4,15 +4,15 @@ Steps to reproduce:
 ```
 $ sudo ./create_gc <USER> <GROUP>
 ``` 
-2. Write singularity container from minimal.def to `/tmp/minimal.sif` 
+2. Write singularity container from `minimal.def` to `/tmp/minimal.sif`.
 ```
 $ sudo ./create_sing.sh
 ```
-3. Write large h5 file to `/tmp/8GB.h5`
+3. Write large h5 file to `/tmp/8GB.h5`.
 ```
 python write_h5.py
 ```
-4. Write large binary file to `/tmp/8GB.bin`
+4. Write large binary file to `/tmp/8GB.bin`.
 ```
 ./write_bin.sh
 ```
