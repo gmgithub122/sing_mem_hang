@@ -2,7 +2,7 @@ Steps to reproduce:
 
 1. Create cgroup with 1GB memory limit.
 ```
-$ sudo ./create_gc <USER> <GROUP>
+$ sudo ./create_cg <USER> <GROUP>
 ``` 
 2. Write singularity container from `minimal.def` to `/tmp/minimal.sif`.
 ```
