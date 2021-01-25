@@ -1,0 +1,26 @@
+Bootstrap: docker
+From: ubuntu:18.04
+Namespace: library
+%setup
+
+%files
+%post
+
+SHELL=/bin/bash
+LC_ALL=en_US.UTF-8
+LANG=en_US.UTF-8
+LANGUAGE=en_US.UTF-8
+
+apt-get -qq update && apt-get -qq -y install curl bzip2 wget sudo locales make libaio1 file python python-h5py python-tables\
+&& apt-get -qq -y install \
+&& apt-get -qq -y autoremove \
+&& apt-get autoclean \
+&& rm -rf /var/lib/apt/lists/* /var/log/dpkg.log
+
+echo "en_US.UTF-8 UTF-8" > /etc/locale.gen && \
+locale-gen
+
+%runscript
+exec /bin/bash "$@"
+%startscript
+exec /bin/bash "$@"
